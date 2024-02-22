@@ -1,0 +1,32 @@
+{% extends 'partials/base.html' %}
+{% block title %}Login Page{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-5 offset-md-6">
+            <div class="card my-3 shadow">
+                <div class="card-body">
+                    <h4>Login Page</h4>
+                    <hr>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-primary w-100" type="submit" value="Login">
+                    </form>
+                    <div class="text-center my-3">
+                        <a href="">Esqueci minha senha</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-success" href="{% url 'users-sign-up' %}">Criar uma conta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+{% endblock %}
+
+  

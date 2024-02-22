@@ -1,0 +1,14 @@
+body {
+    background: url('/media/background.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.profiletest{
+    flex-wrap: nowrap;
+}
+
+.profiletest>* {
+    flex-shrink: unset;
+}
